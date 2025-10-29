@@ -1,0 +1,193 @@
+/* src/css/registro.css */
+/* Estilos aislados para la página de Registro (prefijo rc-) */
+
+:root {
+  --morado-principal: #6a0dad;
+  --morado-claro: #8a4fff;
+  --verde-oscuro: #2E8B57;
+  --verde-claro: #3cb371;
+  --rosa: #ff6b8b;
+  --gris-claro: #f8f9fa;
+  --gris-oscuro: #343a40;
+}
+
+/* Layout principal */
+.rc-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Columna formulario */
+.rc-formSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.rc-logoHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rc-logoImg {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.rc-logoTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.rc-formWrapper {
+  width: 100%;
+  max-width: 450px;
+}
+
+.rc-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rc-formTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--morado-principal);
+  font-weight: 600;
+}
+
+.rc-label {
+  font-weight: 500;
+  color: var(--gris-oscuro);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.rc-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd !important;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.rc-input:focus {
+  border-color: var(--morado-principal) !important;
+  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.2) !important;
+}
+
+.rc-submitBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro)) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: all 0.3s !important;
+  margin-top: 1rem;
+}
+
+.rc-submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+.rc-loginRedirect {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+}
+
+.rc-loginRedirect a {
+  color: var(--morado-principal);
+  font-weight: 600;
+  text-decoration: none;
+}
+.rc-loginRedirect a:hover { text-decoration: underline; }
+
+/* Columna imagen */
+.rc-imageSection {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro));
+  color: #fff;
+  padding: 2rem;
+}
+
+.rc-backgroundImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.rc-imageContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 500px;
+}
+
+.rc-imageTitle {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.rc-imageSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.rc-benefitsList { text-align: left; }
+
+.rc-benefitItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.rc-benefitItem i {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--rosa);
+  width: 30px;
+}
+
+/* Alertas */
+.rc-alert { border-radius: 8px; padding: 0.75rem 1rem; }
+.rc-alert-danger { background-color: #ffebee; border-color: #f44336; color: #c62828; }
+.rc-alert-success { background-color: #e8f5e9; border-color: #4caf50; color: #2e7d32; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .rc-container { flex-direction: column; }
+  .rc-imageSection { order: -1; min-height: 300px; }
+  .rc-formSection { padding: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+  .rc-form { padding: 1.5rem; box-shadow: none; }
+  .rc-logoTitle { font-size: 1.8rem; }
+  .rc-formTitle { font-size: 1.5rem; }
+}

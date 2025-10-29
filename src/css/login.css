@@ -1,0 +1,139 @@
+/* src/css/login.css */
+/* Estilos aislados para Iniciar Sesión (prefijo lc-) */
+
+:root {
+  --morado-principal: #6a0dad;
+  --morado-claro: #8a4fff;
+  --verde-oscuro: #2E8B57;
+  --verde-claro: #3cb371;
+  --gris-claro: #f8f9fa;
+  --gris-oscuro: #343a40;
+}
+
+/* Fondo general del login */
+.lc-root {
+  background: linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Encabezado */
+.lc-header { animation: fadeIn 0.8s ease-out; }
+
+.lc-logoCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 4px solid var(--verde-claro);
+}
+
+.lc-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.lc-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lc-subtitle {
+  color: #f7f7f7;
+  font-size: 0.95rem;
+}
+
+/* Card/Formulario */
+.lc-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.lc-label {
+  font-weight: 600;
+  color: var(--gris-oscuro);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.lc-inputAdornment {
+  background-color: var(--gris-claro);
+  border: 2px solid #e9ecef;
+  border-right: none;
+  color: var(--morado-principal);
+  font-size: 1.1rem;
+}
+
+.lc-toggle {
+  background-color: var(--gris-claro);
+  border: 2px solid #e9ecef;
+  border-left: none;
+  color: var(--morado-principal);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.lc-toggle:hover { color: var(--morado-claro); }
+
+.lc-input {
+  border: 2px solid #e9ecef !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  transition: all 0.3s !important;
+}
+.lc-input:focus {
+  border-color: var(--morado-principal) !important;
+  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.1) !important;
+  z-index: 1;
+}
+
+/* Botón principal */
+.lc-submit {
+  background: linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro)) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  border-radius: 10px !important;
+  transition: all 0.3s !important;
+}
+.lc-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+/* Link a registro */
+.lc-link {
+  color: var(--morado-principal) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+.lc-link:hover { color: var(--morado-claro) !important; text-decoration: underline !important; }
+
+/* Responsive */
+@media (max-width: 576px) {
+  .lc-card { padding: 1.5rem; }
+  .lc-title { font-size: 1.7rem; }
+  .lc-logoCircle { width: 80px; height: 80px; }
+  .lc-logo { width: 50px; height: 50px; }
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

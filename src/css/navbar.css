@@ -1,0 +1,75 @@
+:root{
+  --morado-principal:#6a0dad;
+  --morado-hover:#5a0aa9;
+  --texto-claro:#ffffff;
+}
+
+/* Navbar principal SOLO morado */
+.navbar-rc{
+  background: var(--morado-principal) !important;
+}
+
+/* Links */
+.navbar-rc .nav-link{
+  color: #e9e9ff !important;
+  font-weight: 600;
+  margin: 0 .25rem;
+}
+.navbar-rc .nav-link.active,
+.navbar-rc .nav-link:hover{
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: .25rem;
+}
+
+/* Botón de usuario */
+.user-btn{
+  color:#fff;
+  background:transparent;
+}
+.user-btn:focus{ outline:none; box-shadow:none; }
+.user-avatar{
+  width:34px; height:34px; border-radius:50%;
+  background:#5e2dbd; color:#fff; display:inline-flex;
+  align-items:center; justify-content:center; font-weight:700;
+}
+.user-name{ color:#fff; font-weight:600; }
+
+/* Dropdown propio (sin JS de Bootstrap) */
+.user-menu{ position:relative; }
+.user-dropdown{
+  position:absolute;
+  top:calc(100% + 8px);
+  right:0;
+  min-width: 200px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+  padding:.4rem;
+  z-index: 2000; /* clave para que NO quede detrás de nada */
+}
+.user-dropdown .dropdown-item{
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:none;
+  padding:.6rem .8rem;
+  border-radius:8px;
+  font-weight:500;
+  color:#333;
+}
+.user-dropdown .dropdown-item:hover{
+  background:#f1e8ff;
+  color: var(--morado-principal);
+}
+.dropdown-divider{
+  height:1px; background:#eee; margin:.35rem 0;
+}
+
+/* Toggler */
+.navbar-rc .navbar-toggler{
+  border-color: rgba(255,255,255,.35);
+}
+.navbar-rc .navbar-toggler:focus{
+  box-shadow: 0 0 0 .2rem rgba(255,255,255,.25);
+}

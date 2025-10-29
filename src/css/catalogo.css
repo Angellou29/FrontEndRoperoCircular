@@ -1,0 +1,130 @@
+:root{
+  --morado:#6a0dad;
+  --verde:#2E8B57;
+  --gris-1:#f6f7f9;
+  --gris-2:#e9ecef;
+  --gris-3:#6b7280;
+  --negro:#111827;
+}
+
+.catalogo-container{ background: #fff; min-height:100vh; }
+
+/* Título */
+.titulo{
+  font-weight:800; margin:0;
+  background: linear-gradient(135deg, var(--morado), var(--verde));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+
+/* Botón redondeado */
+.btn-pill{ border-radius:999px; padding:.55rem 1rem; }
+
+/* Tarjeta de filtros */
+.filtros .searchbox{
+  display:flex; align-items:center; gap:.5rem;
+  border:1px solid var(--gris-2); border-radius:12px; padding:.55rem .8rem;
+  background:#fff;
+}
+.filtros .searchbox i{ color:var(--morado); font-size:1.1rem; }
+.filtros .searchbox input{
+  border:none; outline:none; width:100%; font-size:.95rem;
+}
+.select{
+  width:100%; background:#fff;
+  border:1px solid var(--gris-2); border-radius:12px; padding:.55rem .7rem;
+  font-size:.95rem;
+}
+.select:focus{ border-color:var(--morado); box-shadow:0 0 0 3px rgba(106,13,173,.12); outline:0; }
+
+/* Chips de filtros activos */
+.chip{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:#f0ecfb; color:#43266a; border-radius:999px;
+  padding:.35rem .65rem; font-size:.85rem;
+}
+.chip button{ border:0; background:transparent; color:inherit; display:flex; align-items:center; }
+.chip button:hover{ opacity:.8; cursor:pointer; }
+
+/* Skeletons */
+.card.skeleton{ border-radius:14px; overflow:hidden; }
+.sk-img{ height:170px; background:linear-gradient(90deg,#eee,#f5f5f5,#eee); animation:sk 1.2s infinite; }
+.sk-line{ height:16px; margin:10px; background:#eee; border-radius:8px; }
+.sk-line.short{ width:60%; }
+@keyframes sk{ 0%{background-position:-150px 0} 100%{background-position:150px 0} }
+
+/* Empty state */
+.empty{ text-align:center; padding:60px 0; color:var(--gris-3); }
+.empty i{ font-size:2rem; display:block; margin-bottom:.5rem; }
+
+/* Item */
+.item-card{ border:0; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+.item-card .thumb{ position:relative; background:var(--gris-1); }
+.item-card .thumb img{ width:100%; height:220px; object-fit:cover; display:block; }
+.estado{
+  position:absolute; left:10px; top:10px; font-size:.75rem; font-weight:700;
+  padding:.25rem .5rem; border-radius:8px; background:#fff; color:var(--negro);
+}
+.estado-nuevo{ background:#e6ffed; color:#065f46; }
+.estado-casi_nuevo{ background:#eff6ff; color:#1d4ed8; }
+.estado-bueno{ background:#fff7ed; color:#9a3412; }
+.estado-regular{ background:#fef2f2; color:#991b1b; }
+
+.item-card .card-body{ padding:10px 12px 14px; }
+.item-card .tit{ font-weight:700; color:#1f2937; }
+.item-card .txt.muted{ color:#6b7280; font-size:.9rem; }
+.color-pill{
+  display:inline-block; padding:.15rem .45rem; font-size:.75rem;
+  background:#f3f4f6; border-radius:999px; margin-right:.25rem; color:#374151;
+}
+.color-pill.more{ background:#ede9fe; color:#5b21b6; }
+
+/* Modal minimal */
+.rc-modal-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.35);
+  display:flex; align-items:center; justify-content:center; z-index:1050;
+}
+.rc-modal{
+  width:min(980px, 96vw); background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.rc-modal-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 18px; background:linear-gradient(135deg, var(--morado), var(--verde)); color:#fff;
+}
+.rc-modal-body{ padding:16px; }
+.rc-modal-footer{
+  padding:12px 16px; display:flex; justify-content:flex-end; gap:10px; border-top:1px solid var(--gris-2);
+}
+
+/* Chips de selección múltiple (colores en modal) */
+.chips{ display:flex; gap:.35rem; flex-wrap:wrap; }
+.chip-btn{
+  border:1px solid var(--gris-2); background:#fff; padding:.3rem .55rem; border-radius:999px; font-size:.85rem;
+}
+.chip-btn.on{ background:#f0ecfb; border-color:#d7c8ff; color:#43266a; }
+
+.item-card.clickable { cursor: pointer; transition: transform .08s ease, box-shadow .12s ease; }
+.item-card.clickable:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+
+.item-card .thumb { position: relative; }
+.item-card .thumb .ver-btn {
+  position: absolute; right: 10px; bottom: 10px;
+  background: rgba(17, 24, 39, .85); color: #fff;
+  border: 0; border-radius: 999px; padding: .35rem .7rem;
+  font-size: .85rem; opacity: 0; transition: opacity .15s ease;
+}
+.item-card .thumb:hover .ver-btn { opacity: 1; }
+.item-card .thumb .ver-btn:focus { opacity: 1; outline: 2px solid #6b4eff; outline-offset: 2px; }
+
+.estado-overlay {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.acciones-overlay {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: .5rem;
+}

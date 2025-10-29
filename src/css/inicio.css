@@ -1,0 +1,82 @@
+:root{
+  --morado-principal:#6a0dad;
+  --morado-claro:#8a4fff;
+  --verde-oscuro:#2E8B57;
+  --verde-claro:#3cb371;
+  --gris-claro:#f8f9fa;
+  --gris-oscuro:#343a40;
+}
+
+/* Layout pegajoso para que el footer baje */
+html, body, #root { height:100%; margin:0; display:flex; flex-direction:column; }
+#ropero-page-container { flex:1; display:flex; flex-direction:column; }
+
+/* NAVBAR SUPERIOR */
+.navbar-dark.bg-dark{
+  background:linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro)) !important;
+  padding:.8rem 1rem;
+}
+.navbar-dark .navbar-brand{ font-weight:700; font-size:1.3rem; color:#fff; }
+
+/* NAVBAR SECUNDARIO */
+.navbar-light.bg-light{ border-bottom:1px solid #e5e7eb; }
+.navbar-light .nav-link{ font-weight:600; color:#4b5563; transition:color .3s; }
+.navbar-light .nav-link:hover{ color:var(--morado-principal); }
+
+/* HERO */
+.hero-section{
+  background:linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro));
+  padding:4rem 0;
+  text-align:center;
+}
+@media (min-width: 992px){
+  .hero-section{ text-align:left; }
+}
+.hero-image{ max-height:400px; object-fit:cover; }
+
+/* REGLAS */
+.regla-icono{
+  width:50px; height:50px;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);
+}
+
+/* CONSIDERACIONES (imagen que enviaste) */
+.consideraciones-img{
+  width:100%;
+  max-width:980px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* BENEFICIOS */
+.section-title{
+  font-size:1.8rem; font-weight:700; color:#333;
+}
+.card-hover{
+  transition:transform .25s ease, box-shadow .25s ease;
+  border-radius:1rem;
+}
+.card-hover:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+/* FOOTER (si tu <Footer/> usa estas clases) */
+.footer-circular{
+  background:linear-gradient(135deg, var(--morado-principal), var(--verde-oscuro));
+  color:#f1f1f1; font-size:.95rem; line-height:1.6;
+  border-top-left-radius:20px; border-top-right-radius:20px;
+  padding:2rem 1rem; margin-top:auto; text-align:center;
+}
+.footer-circular .footer-title{ font-weight:700; margin-bottom:1rem; color:#fffbe6; }
+.footer-circular p{ margin:.3rem 0; color:#e0e0e0; }
+.footer-circular hr{ border:none; height:1px; background:rgba(255,255,255,.3); }
+.footer-circular .social-link{ color:#fff; font-size:1.5rem; transition:transform .3s,color .3s; }
+.footer-circular .social-link:hover{ transform:scale(1.2); color:#fffbe6; }
+.footer-circular .small-text{ font-size:.85rem; color:#dcdcdc; }
+
+/* Responsivo */
+@media (max-width:576px){
+  .hero-section{ padding:3rem 0; }
+  .section-title{ font-size:1.6rem; }
+}
