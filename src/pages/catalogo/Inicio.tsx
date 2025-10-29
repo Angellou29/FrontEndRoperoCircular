@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
-import Logo from '../../../imagenes/Logo.png';
 import ImagenIntercambio from '../../../imagenes/intercambio.jpg';
 import ConsideracionesImg from '../../../imagenes/consideraciones.jpeg'; // ← guarda tu imagen con este nombre
-import { useUser } from '../../context/UserContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/inicio.css'; // ← nuevo css específico de la página
+//hola
 
 function Inicio() {
 

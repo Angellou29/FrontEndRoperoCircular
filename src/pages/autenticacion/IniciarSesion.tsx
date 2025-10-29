@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Form, Alert } from 'react-bootstrap';
 import LogoPrincipal from '../../../imagenes/Logo.png';
-import { iniciarSesion as apiIniciarSesion } from '../../api/auth'; // ← usa tu api
 import { useUser } from '../../context/UserContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/login.css'; // ← nuevo css específico para login
