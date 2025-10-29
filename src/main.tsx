@@ -18,7 +18,7 @@ if (!rootElement) throw new Error('No se encontró el elemento #root');
 createRoot(rootElement).render(
   <StrictMode>
     <UserProvider>
-      <BrowserRouter basename="RoperoCircular">
+      <BrowserRouter>
         <Routes>
           {/* públicas (sin navbar) */}
           <Route path="/" element={<Navigate to="/IniciarSesion" replace />} />

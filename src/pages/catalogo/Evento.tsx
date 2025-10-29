@@ -62,7 +62,7 @@ function Evento() {
               </div>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col-lg-6"> 
               <img
                 src={ImagenEvento}
                 alt="Evento de intercambio"
